@@ -1,0 +1,64 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    background-color: wheat;
+}
+.imagemum{
+    display: flexbox;
+    width: 150px;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+.imagemdois{
+    display: flexbox;
+    width: 150px;
+    height: 85px;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+.imagemtres{
+    display: flex;
+    width: 180px;
+    height: 100px;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+.imagens{
+    display: flex;
+    gap: 15px;
+}
+p{
+    color: blue;
+}
+h1{
+    font-size: 20px;
+    text-align: center;
+    color:blue;
+    background: url(../imagens/imagemfundo.jpg);
+    background-repeat: repeat; /* exercicio pede para não repetir mas deixei assim*/
+}
+.button{
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.home{
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: #B2A9A8;
+    transition-duration: 3s;
+}
+footer{
+    color: white;
+    background-color: black;
+    text-align: center;
+}

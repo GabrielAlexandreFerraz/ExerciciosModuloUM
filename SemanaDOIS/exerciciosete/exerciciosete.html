@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+<script>
+var quanttfinal = 0;
+var respostaboa = []
+var respostaruim =[]
+var respostamedia = []
+
+for(i = 1; i <= 4; i++){
+    quanttfinal = parseFloat(prompt("Qual classificação você dá para a serie Stranger Things: \n Digite 1 para Excelente\n Digite 2 para Boa \n E Digite 3 para Ruim"));
+if(quanttfinal == 1){respostaboa++}else if(quanttfinal == 2){respostamedia++}else if(quanttfinal == 3){respostaruim++}
+}
+alert("Quantidade de pessoas que tem bom gosto são de: " + respostaboa);
+alert("Quantidade de pessoas que tem gosto duvidoso gosto são de: " + respostamedia);
+alert("Quantidade de pessoas que tem mal gosto são de: " + respostaruim);
+</script>
+
+</body>
+</html>

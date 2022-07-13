@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+<script>
+var array = ['','Hortifruti', 'Laticíneos','Carnes','Peixes','Aves'];
+var comprarFinal = false;
+var comprando = '';
+var qtd = ['0','0','0','0','0'];
+do {
+comprando = window.prompt("Qual produto você deseja comprar:\n (1) Hortifruti:\n (2) Laticínios:\n (3) Carnes:\n (4) Peixes:\n (5) Aves:\n (6) Fechar pedido");
+if (comprando != '1' && comprando != '2' && comprando != '3' && comprando != '4' && comprando != '5' && comprando != '6'){
+    window.alert("Por favor escolha apenas números entre 1 e 6.")
+    comprando = '';
+}else{
+    switch (comprando) {
+        case '1':
+            qtd[0] = window.prompt("Quantos itens você gostaria de comprar de " +array[comprando]);
+            break;
+        case '2':
+            qtd[1] = window.prompt("Quantos itens você gostaria de comprar de " +array[comprando]);
+            break;
+        case '3':
+            qtd[2] = window.prompt("Quantos itens você gostaria de comprar de " +array[comprando]);
+            break;
+        case '4':
+            qtd[3] = window.prompt("Quantos itens você gostaria de comprar de " +array[comprando]);
+            break;
+        case '5':
+            qtd[4] = window.prompt("Quantos itens você gostaria de comprar de " +array[comprando]);
+            break;  
+        case '6':
+            window.alert("Obrigado.");
+            comprarFinal = true;
+            break;     
+    }                       
+}          
+} while (comprarFinal == false);
+document.write(
+"<h2>Lista de compras</h2>Você selecionou as seguintes quantidades abaixo:</br>"+qtd[0]+' itens de Hortifruti</br>'+qtd[1]+' itens de Laticínios</br>'+qtd[2]+' itens de Carnes</br>'+qtd[3]+' itens de Peixes</br>'+qtd[4]+' itens de Aves</br>'
+);
+
+var maiorProduto = Math.max.apply(null, qtd );
+
+for (i=0 ; i < qtd.length ; i++){
+  if (maiorProduto == qtd[i]) {
+    document.write("<h2>O produto mais solicitado:</h2></br>"+ array[i+1]);
+  }
+}
+</script>
+
+</body>
+</html>

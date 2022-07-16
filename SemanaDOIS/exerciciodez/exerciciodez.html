@@ -4,23 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="exerciciodez.js" defer></script>
     <title></title>
 </head>
 <body>
 
 <script>
-var nome = (prompt("Qual o nome do Aluno ?"));
-var n1 = parseFloat(prompt("Qual a Primeira Nota do aluno ?"));
-var n2 = parseFloat(prompt("Qual a Segunda Nota do aluno ?"));
-var n3 = parseFloat(prompt("Qual a Terceira Nota do aluno ?"));
-var n4 = parseFloat(prompt("Qual a Quarta Nota do aluno ?"));
+var nome,
+  nota,
+  notas = [],
+  soma = 0,
+  media,
 
-for(i = 1; i <= 4; i++){
-    quanttfinal = parseFloat(prompt("Qual classificação você dá para a serie Stranger Things: \n Digite 1 para Excelente\n Digite 2 para Boa \n E Digite 3 para Ruim"));
-if(quanttfinal == 1){respostaboa++}else if(quanttfinal == 2){respostamedia++}else if(quanttfinal == 3){respostaruim++}
+nome = window.prompt("Digite o NOME do aluno.");
+for (let i = 1; i <= 4; i++) {
+    nota = parseFloat(prompt("Digite as notas dos alunos " + i + "ª nota ?"));
+    notas.push(nota);
 }
-alert("Quantidade de pessoas que tem bom gosto são de: " + respostaboa);
+ 
+for (i = 0; i < notas.length; i++) {
+  soma += notas[i];
+}
 
+media = soma / notas.length;
+
+if (media >= 7) {
+  document.write("<h1> Aluno : " + nome +"</h1> <br>");
+  document.write("<h1> Aluno : " + media +"</h1><br>");
+  document.write("<h1> Situação do Aluno: Aprovado </h1><br>");
+} else {
+  document.write("<h1> Aluno : " + nome +"</h1> <br>");
+  document.write("<h1> Aluno : " + media +"</h1><br>");
+  document.write("<h1> Situação do Aluno: Reprovado </h1><br>");
+}
 </script>
 
 </body>

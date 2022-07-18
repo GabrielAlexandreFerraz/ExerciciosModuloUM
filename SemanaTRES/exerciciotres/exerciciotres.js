@@ -11,3 +11,4 @@ function exercicioTres(array) {
     }
     return [pares, impares];
   }
+  console.log(`A quantidade informada foi ${array.length} a de valores pares foi ${pares} a de valores impares foi ${impares}`)

@@ -1,11 +1,21 @@
-const txt1 = document.getElementsByClassName("txt1")
-txt1.innerHTML = "texto 1 de Teste"
+let divTextos = document.getElementById('textos')
 
-const txt2 = document.getElementsByClassName("txt2")
-txt2.innerHTML = "texto 2 de Teste"
+let texto1 = document.createElement('div')
+texto1.innerHTML = "Primeiro Texto"
+divTextos.append(texto1)
 
-const txt3 = document.getElementsByClassName("txt3")
-txt3.innerHTML = "texto 3 de Teste"
+let texto2 = document.createElement('div')
+texto2.innerHTML = "Segundo Texto"
+divTextos.append(texto2)
 
-const txt4 = document.getElementsByClassName("txt4")
-txt4.innerHTML = "texto 4 de Teste"
+let texto3 = document.createElement('div')
+texto3.innerHTML = "Terceiro Texto"
+divTextos.append(texto3)
+
+let texto4 = document.createElement('div')
+texto4.innerHTML = "Quarto Texto"
+divTextos.append(texto4)
+
+let texto5 = document.createElement('div')
+texto5.innerHTML = "Quinto Texto"
+divTextos.append(texto5)

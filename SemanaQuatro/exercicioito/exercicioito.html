@@ -1,15 +1,53 @@
-</html>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="exericicioito.js"></script>
-
     <title>Exercicio Oito</title>
   </head>
   <body>
-<h1 id ="h1"></h1>
+  
+    <h1 id="h1">Resposta da série mais antiga:</h1>
+
+    <script>
+      
+class Serie {
+    nome;
+    anolancamento;
+    qttTemporada;
+  
+    constructor(nome, anolancamento, qttTemporada) {
+      this.nome = nome;
+      this.anolancamento = anolancamento;
+      this.qttTemporada = qttTemporada;
+    }
+  }
+  
+  let anoMaisAntiga, nomeAntigo;
+  
+  for (let i = 0; i <= 3; i++) {
+    let nome = prompt("Digite o nome da série:");
+    let anolancamento = parseInt(prompt("Digite o ano de lançamento da série:"));
+    let qttTemporada = parseInt(
+      prompt("Digite a quantidade de temporadas da série:")
+    );
+  
+    const serie = new Serie(nome, anolancamento, qttTemporada);
+    if (i == 0) {
+      anoMaisAntiga = serie.anolancamento;
+      nomeAntigo = serie.nome;
+    } else {
+      if (serie.anolancamento < anoMaisAntiga) {
+        anoMaisAntiga = serie.anolancamento;
+        nomeAntigo = serie.nome;
+      }
+    }
+  }
+  
+  let tagH1 = document.getElementById("h1");
+  tagH1.innerHTML += nomeAntigo;
+
+    </script>
   </body>
 </html>

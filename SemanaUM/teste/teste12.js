@@ -17,15 +17,14 @@ console.log(media)
 calcularMedia(array)
 
 
-
-// var arrayQualquer = [1,2,3,4,5,6,7,8,9]
-// const numeroPositivos = (array = []) => {
-//   newArray = []
-//   for (const item of array) {
-//     if (item > 0){
-//       newArray.push(item)
-//     }
+// function maiorStringDoArray(array){
+//     let maior = "";
+//   for (let item of array) {
+//      if(item.length > maior.length){
+//         maior = item;
+//      }
 //   }
-//   return newArray
+//   return maior
 // }
-// console.log(numeroPositivos(arrayQualquer))
+
+// console.log(maiorStringDoArray(estados));
